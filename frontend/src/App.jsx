@@ -1,12 +1,12 @@
  import React from 'react'
  import './App.css'
-import Notes from './pages/Notes'
+import Notess from './pages/Notess'
   
  
  const App = () => {
    return (
      <div>
- <Notes/>
+ <Notess/>
       </div>
      
    )
