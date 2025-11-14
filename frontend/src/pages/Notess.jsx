@@ -5,7 +5,7 @@ import {
  } from 'react';
 
 import axios from 'axios';
-import "./notes.css";
+import "./Notes.css";
 
 function Notess() {
   const [notes, setNotes] = useState([]);
