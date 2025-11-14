@@ -20,7 +20,7 @@ function Notes() {
   //fetch notes
   const fetchNotes = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/getnotes");
+      const response = await axios.get("https://notes-u6lx.onrender.com/api/getnotes");
       setNotes(response.data); //array of notes
     }catch (error) {
       console.log("fetch error:", error);
@@ -47,7 +47,7 @@ function Notes() {
       if(editNoteId) {
       //update
       await axios.put(
-        `http://localhost:8000/api/updatenote/${editNoteId}`,
+        `https://notes-u6lx.onrender.com/api/updatenote/${editNoteId}`,
         {title,message,category}
       );
       alert("Note updated");
@@ -55,7 +55,7 @@ function Notes() {
     }else{
 
     //add 
-    await axios.post("http://localhost:8000/api/createnote",{
+    await axios.post("https://notes-u6lx.onrender.com/api/createnote",{
     title,
     message,
     category
@@ -83,7 +83,7 @@ function Notes() {
 
   const handleDelete = async (id) => {
     try{
-      await axios.delete(`http://localhost:8000/api/deletenote/${id}`);
+      await axios.delete(`https://notes-u6lx.onrender.com/api/deletenote/${id}`);
       fetchNotes();
       alert("Note deleted");
     } catch (error) {
