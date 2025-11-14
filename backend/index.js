@@ -11,7 +11,12 @@ const PORT = process.env.PORT
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: "https://todolist-xlxc.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
  Runserver()
 app.use('/api',noteRoutes)
 app.listen(PORT,()=>{
